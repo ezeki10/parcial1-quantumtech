@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para más información sobre computación cuántica">
+    <title>Contacto - Computación Cuántica</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Computación Cuántica">
+                <h1>QuantumTech</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca De</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas sobre computación cuántica? Estamos aquí para ayudarte</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <section class="main-content">
+                <div class="card form-card">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form id="contactForm" action="../data/guardar.php" method="POST" novalidate>
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                required 
+                                minlength="3"
+                                maxlength="100"
+                                placeholder="Ingresa tu nombre completo">
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="ejemplo@dominio.com">
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (Opcional)</label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                pattern="[0-9]{8,15}"
+                                placeholder="Ej: 66778899 (8 a 15 dígitos)">
+                            <small>Formato: 8 a 15 dígitos numéricos</small>
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interes">Área de Interés *</label>
+                            <select id="interes" name="interes" required>
+                                <option value="" disabled selected>Selecciona un área</option>
+                                <option value="simulacion">Simulación Cuántica</option>
+                                <option value="criptografia">Criptografía Post-Cuántica</option>
+                                <option value="algoritmos">Algoritmos Cuánticos</option>
+                                <option value="general">Información General</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                rows="5" 
+                                required 
+                                minlength="10"
+                                maxlength="500"
+                                placeholder="Escribe tu mensaje aquí (mínimo 10 caracteres)"></textarea>
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                        <p class="form-note">* Campos obligatorios. La validación se realiza en tiempo real.</p>
+                    </form>
+                </div>
+            </section>
+            
+            <aside class="sidebar">
+                <div class="card aside-card">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <strong>Ubicación</strong>
+                            <p>Campus Metropolitano UTP, Panamá</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Correo</strong>
+                            <p><a href="mailto:quantumtech@utp.ac.pa">quantumtech@utp.ac.pa</a></p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Teléfono</strong>
+                            <p>(+507) 560-3200 Ext. 1234</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card aside-card">
+                    <h3>Preguntas Frecuentes (FAQ)</h3>
+                    <div class="faq-item">
+                        <strong>¿Qué lenguajes usa este sitio?</strong>
+                        <p>Usamos HTML5 para la estructura, CSS3 para el diseño y **JavaScript** para la validación del formulario.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>¿Dónde se guardan los datos?</strong>
+                        <p>Los datos se envían a un script de servidor (`guardar.php`) para su almacenamiento en un archivo de datos, cumpliendo con el requisito del parcial.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>QuantumTech</h4>
+                    <p>Explorando el futuro de la computación</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="acerca.html">Acerca De</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos Externos</h4>
+                    <ul>
+                        <li><a href="https://www.ibm.com/quantum" target="_blank">IBM Quantum</a></li>
+                        <li><a href="https://quantumai.google/" target="_blank">Google Quantum AI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuantumTech. Todos los derechos reservados. | Universidad Tecnológica de Panamá</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/formulario.js"></script>
+</body>
+</html>
